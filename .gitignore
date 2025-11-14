@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the finder
+.Spotlight-V100
+.Trashes
+
