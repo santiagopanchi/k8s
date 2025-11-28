@@ -15,7 +15,7 @@ kind: Deployment
 metadata:
   name: hello-two
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: hello-two
@@ -39,5 +39,10 @@ spec:
             secretKeyRef:
               name: resend-secret
               key: RESEND_API_KEY
+        - name: RECAPTCHA_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: recaptcha-secret-key
+              key: secret-key
         ports:
         - containerPort: 8000

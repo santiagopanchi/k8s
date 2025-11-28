@@ -30,5 +30,11 @@ spec:
       - name: hello-ingress
         image: santiagopanchi/homepage
         imagePullPolicy: Always
+        env:
+        - name: NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+          valueFrom:
+            secretKeyRef:
+              name: recaptcha-secret
+              key: site-key
         ports:
         - containerPort: 3000
